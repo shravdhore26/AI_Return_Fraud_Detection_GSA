@@ -27,7 +27,7 @@ reason_pattern:Number(reason_pattern.value)
 
 }
 
-let res=await fetch("http://127.0.0.1:8000/predict",{
+let res=await fetch("https://aireturnfrauddetectiongsa-production.up.railway.app/predict",{
 
 method:"POST",
 headers:{"Content-Type":"application/json"},
@@ -86,7 +86,7 @@ alertBox.style.display="none"
 
 animateGauge(score,color)
 
-let exp=await fetch("http://127.0.0.1:8000/explain",{
+let exp=await fetch("https://aireturnfrauddetectiongsa-production.up.railway.app/explain",{
 
 method:"POST",
 headers:{"Content-Type":"application/json"},
