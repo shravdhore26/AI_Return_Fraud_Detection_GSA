@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pandas
+numpy
+joblib
+pydantic
+scikit-learn==1.0.2

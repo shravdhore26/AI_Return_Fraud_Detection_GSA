@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AI Return Fraud Detection</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>AI Return Fraud Detection</h1>
+
+<div class="container">
+
+<div class="form">
+
+<h3>Return Details</h3>
+
+<label>Number of Returns</label>
+<input id="num_returns">
+
+<label>Refund Amount</label>
+<input id="refund_amount">
+
+<label>Time Gap (days)</label>
+<input id="time_gap">
+
+<label>Product Mismatch (0 or 1)</label>
+<input id="mismatch">
+
+<label>Category Risk (1-5)</label>
+<input id="category_risk">
+
+<label>Customer Loyalty (1-10)</label>
+<input id="loyalty">
+
+<label>Return Reason Pattern</label>
+<input id="reason_pattern">
+
+<button onclick="predict()">Predict Fraud</button>
+
+<button onclick="randomCase()">Generate Random Case</button>
+
+<button onclick="resetForm()">Reset</button>
+
+</div>
+
+
+<div class="results">
+
+<canvas id="gauge" width="320" height="220"></canvas>
+
+<h2 id="score">0%</h2>
+
+<h3 id="label">Prediction</h3>
+
+<div id="alertBox">
+⚠ FRAUD ALERT
+</div>
+
+<p id="explain"></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

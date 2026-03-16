@@ -1,0 +1,295 @@
+/* CYBERPUNK GLASSMORPHISM DASHBOARD */
+
+body{
+
+font-family: "Segoe UI", sans-serif;
+margin:0;
+
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+color:white;
+
+/* cyberpunk background */
+
+background:
+radial-gradient(circle at 20% 20%, rgba(140,0,255,0.45), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(0,200,255,0.35), transparent 40%),
+radial-gradient(circle at 50% 90%, rgba(200,0,255,0.35), transparent 40%),
+linear-gradient(135deg,#070015,#120024,#060012);
+
+overflow-x:hidden;
+
+}
+
+/* TITLE */
+
+h1{
+
+margin-top:35px;
+
+font-weight:600;
+letter-spacing:1px;
+
+color:#d8b4ff;
+
+text-shadow:
+0 0 10px #8a2be2,
+0 0 20px #8a2be2,
+0 0 40px #8a2be2;
+
+}
+
+/* MAIN CONTAINER */
+
+.container{
+
+display:flex;
+gap:40px;
+
+margin-top:30px;
+
+padding:40px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 0 40px rgba(150,0,255,0.5),
+0 0 80px rgba(120,0,255,0.25);
+
+}
+
+/* LEFT PANEL */
+
+.form{
+
+width:260px;
+
+background:rgba(255,255,255,0.07);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+0 0 20px rgba(180,0,255,0.35);
+
+}
+
+/* RIGHT PANEL */
+
+.results{
+
+width:420px;
+
+text-align:center;
+
+background:rgba(255,255,255,0.07);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+0 0 20px rgba(180,0,255,0.35);
+
+}
+
+/* LABELS */
+
+label{
+
+display:block;
+margin-top:12px;
+
+font-size:13px;
+font-weight:600;
+
+color:#e0c8ff;
+
+}
+
+/* INPUT FIELDS */
+
+input{
+
+width:100%;
+padding:9px;
+
+margin-top:5px;
+
+border-radius:8px;
+
+border:1px solid rgba(200,0,255,0.55);
+
+background:rgba(255,255,255,0.1);
+
+color:white;
+
+outline:none;
+
+transition:0.25s;
+
+}
+
+input:focus{
+
+border-color:#c77dff;
+
+box-shadow:
+0 0 10px #c77dff,
+0 0 20px rgba(199,125,255,0.4);
+
+}
+
+/* BUTTONS */
+
+button{
+
+margin-top:12px;
+
+padding:10px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:600;
+
+background:linear-gradient(135deg,#8a2be2,#c77dff);
+
+color:white;
+
+transition:0.25s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 15px #c77dff,
+0 0 25px #8a2be2;
+
+}
+
+/* FRAUD SCORE */
+
+#score{
+
+font-size:56px;
+font-weight:700;
+
+margin-top:-5px;
+
+text-shadow:
+0 0 10px #c77dff,
+0 0 25px #c77dff;
+
+}
+
+/* PREDICTION LABEL */
+
+#label{
+
+font-size:24px;
+
+font-weight:600;
+
+margin-top:5px;
+
+}
+
+/* FRAUD ALERT BOX */
+
+#alertBox{
+
+display:none;
+
+margin-top:12px;
+
+padding:10px;
+
+border-radius:8px;
+
+background:#ff003c;
+
+color:white;
+
+font-weight:bold;
+
+box-shadow:
+0 0 10px red,
+0 0 20px red,
+0 0 40px rgba(255,0,0,0.5);
+
+animation:blink 1s infinite;
+
+}
+
+/* BLINK ANIMATION */
+
+@keyframes blink{
+
+0%{opacity:1;}
+
+50%{opacity:0.35;}
+
+100%{opacity:1;}
+
+}
+
+/* GAUGE */
+
+canvas{
+
+margin-top:20px;
+
+filter:
+drop-shadow(0 0 8px #c77dff)
+drop-shadow(0 0 15px #8a2be2);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.container{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.results{
+
+width:300px;
+
+}
+
+.form{
+
+width:300px;
+
+}
+
+}
